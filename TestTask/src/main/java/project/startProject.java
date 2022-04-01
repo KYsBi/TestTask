@@ -30,7 +30,7 @@ public class startProject {
         String usersString = in.nextLine();
 
         try {
-            fis = new FileInputStream("src/main/resources/config.properties");
+            fis = new FileInputStream("TestTask/src/main/resources/config.properties");
             property.load(fis);
             String columnFromProperties = property.getProperty("column");
             int columnForSearch = Integer.valueOf(columnFromProperties);
@@ -47,7 +47,7 @@ public class startProject {
                 String str1 = scanner.nextLine();                                       //считываем строку
                 int z=0;                                                                //количество совпадений с введенной строкой
 
-                String str = str1.replaceAll("\"", "");                 //затем str1 парсится в str
+                String str = str1.replaceAll("\"", "");                                 //затем str1 парсится в str
                 String[] word = str.split(",");
 
 
@@ -83,7 +83,7 @@ public class startProject {
                 al.add(entry.getKey());
             }
 
-            for(int i=0;i<countOfSuitableResult;i++){                                      //выводим подходяшие строки
+            for(int i=0;i<countOfSuitableResult;i++){                                           //выводим подходяшие строки
                 System.out.println(lineWithAllInformation.get(al.get(i)));
             }
 
